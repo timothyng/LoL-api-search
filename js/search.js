@@ -1,11 +1,12 @@
 $(document).ready(function() {
     $('button').click(function() {
-    	var toSearch = $("input[name=searchitem]").val();
+    	var toSearch = $("input[name=searchItem]").val();
     	var summonerObj = JSON.parse(search(toSearch));
     	var sumIcon = summonerObj[toSearch].profileIconId; 
     	var toAdd = summonerObj[toSearch].name;
-        $('#results').append("<h1> <img src=\"https://ddragon.leagueoflegends.com/cdn/4.16.1/img/profileicon/"+sumIcon+".png\"> "+toAdd+" Summoner Level: " + summonerObj[toSearch].summonerLevel+"</h1>");
+        $('#results').append("<h1> <img src=\"http://ddragon.leagueoflegends.com/cdn/4.4.3/img/profileicon/"+sumIcon+".png\"> "+toAdd+" Summoner Level: " + summonerObj[toSearch].summonerLevel+"</h1>");
     });
+	
 });
 
 function search(searchItem) {
